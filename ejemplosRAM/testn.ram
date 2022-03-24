@@ -1,0 +1,24 @@
+read 1
+load 1
+jgtz seguir
+write =0
+jump end
+seguir:
+  load 1
+  store 2
+  load 1
+  sub =1
+  store 3
+while: 
+  JZERO endwhile
+  load 2
+  mult 1
+  store 2
+  load 3
+  sub =1
+  store 3
+  jump while
+endwhile: 
+  write 2
+endif:
+  halt

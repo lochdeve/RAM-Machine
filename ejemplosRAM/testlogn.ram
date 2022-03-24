@@ -1,0 +1,44 @@
+read 1
+load 1
+JGTZ else
+write =0
+jump fin
+else: 
+  load 1
+  sub =2
+  store 3
+  load 1
+  mult 1
+  store 2
+while: 
+  load 3
+  JGTZ seguir
+  jump endwhile
+seguir: 
+  load 1
+  div 2
+  MULT 2
+  store 4
+  load 1
+  sub 4
+  JZERO par
+  load 2
+  mult 1
+  store 2
+  load 3
+  sub =1
+  store 3
+  jump while
+par: 
+  load 2
+  mult 1
+  mult 1
+  store 2
+  load 3
+  sub =2
+  store 3
+  jump while
+endwhile: 
+  write 2
+fin: 
+  HALT
